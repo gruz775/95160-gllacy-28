@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Глэйси - магазин мороженого</title>
   </head>
-  <body>
+  <body style="background-color: #849D8F"> <!-- Временный фон для видимости белых изображений -->
     <header>
       <nav>
         <a>
-          <img src="https://via.placeholder.com/200x100" width="200" height="100" alt="Логотип магазина Глэйси">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
         </a>
         <ul>
           <li>
@@ -37,10 +37,95 @@
       <h1>Глэйси - магазин мороженого</h1> <!-- Скрытый заголовок-->
 
       <!-- Здесь будет слайдер -->
+      <section class="slide-1">
+        <div>
+          <h2>Крем-брюле с малиновым джемом</h2>
+          <a href="blank.html">Давайте оба!</a>
+          <div>
+            <label></label>
+            <label></label>
+            <label></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide-2">
+        <div>
+          <h2>Шоколадный пломбир и лимонный сорбет</h2>
+          <a href="blank.html">Давайте оба!</a>
+          <div>
+            <label></label>
+            <label></label>
+            <label></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide-3">
+        <div>
+          <h2>Пломбир с помадкой и лимонный щербет</h2>
+          <a href="blank.html">Давайте оба!</a>
+          <div>
+            <label></label>
+            <label></label>
+            <label></label>
+          </div>
+        </div>
+      </section>
 
       <!-- Здесь будут акции -->
+      <section>
+        <h2>Акции</h2> <!-- Скрытый заголовок -->
+        <article class="promo-1">
+          <h3>Малинка даром!</h3>
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a href="blank.html">Хочу варенье!</a>
+        </article>
+
+        <article class="promo-2">
+          <h3>Шоколадки даром!</h3>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a href="blank.html">Хочу шоколадки!</a>
+        </article>
+      </section>
 
       <!-- Здесь будут хитовые товары -->
+      <section>
+        <ul>
+          <li>
+            <a href="">
+              <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              <p>
+                <img src="img/product-01.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                  <p>310&#8381;<span>/кг</span></p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>Сливочно-кофейное с кусочками шоколада</h3>
+              <p>
+                <img src="img/product-02.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                  <p>380&#8381;<span>/кг</span></p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+              <p>
+                <img src="img/product-03.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                  <p>355&#8381;<span>/кг</span></p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+              <p>
+                <img src="img/product-04.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                  <p>415&#8381;<span>/кг</span></p>
+            </a>
+          </li>
+        </ul>
+      </section>
 
       <section>
         <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
@@ -72,10 +157,28 @@
       <form class="" action="index.html" method="post">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <input type="email">
-        <button type="button">Отправить</button>
+        <button type="submit">Отправить</button>
       </form>
 
       <!--Интерактивная карта-->
+      <div>
+        <img src="img/pin.svg" height="100" width="100" alt="Маркер местоположения магазина на карте">
+        <article class="contacts">
+          <h2>
+            Адрес главного офиса<br>
+            и офлайн-магазина:
+          </h2>
+          <p>
+            <span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
+          </p>
+          <p>
+            Для заказов по телефону:
+            <span>8 812 450-25-25</span>
+            (с 10 до 20 ужедневно)
+          </p>
+          <a href="blank.html">Форма обратной связи</a>
+        </article>
+      </div>
 
     </main>
 
@@ -117,7 +220,7 @@
       </section>
 
       <p>
-        <img src="https://am09.github.io/nerds/img/academy.png" width="100" height="50" alt="Логотип HTML Academy">
+        <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
         <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
       </p>
     </footer>
