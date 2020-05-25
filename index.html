@@ -5,14 +5,31 @@
     <title>Глэйси - магазин мороженого</title>
   </head>
   <body style="background-color: #849D8F"> <!-- Временный фон для видимости белых изображений -->
+<!--ШАПКА===================================================================-->
     <header>
       <nav>
-        <a>
+        <a href="/">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
         </a>
         <ul>
           <li>
             <a href="catalog.html">Каталог</a>
+            <ul>
+              <li>
+                <a href="blank.html">Новинки</a></li>
+              <li>
+                <a href="blank.html">Сливочное</a>
+              </li>
+              <li>
+                <a href="blank.html">Щербеты</a>
+              </li>
+              <li>
+                <a href="blank.html">Фруктовый лед</a>
+              </li>
+              <li>
+                <a href="blank.html">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="blank.html">Доставка и оплата</a>
@@ -21,20 +38,79 @@
             <a href="blank.html">О Компании</a>
           </li>
         </ul>
+
         <p>
           <a href="blank.html">Поиск</a>
         </p>
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
+          <input type="search" name="search" placeholder="Что ищем?" required>
+        </form>
+
         <p>
           <a href="blank.html">Вход</a>
         </p>
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <input type="email" name="email" placeholder="Электронная почта" required>
+          <input type="password" name="password" placeholder="Пароль" required>
+          <div>
+            <button type="submit">Войти</button>
+          </div>
+          <div>
+            <a href="blank.html">Забыли пароль?</a>
+            <a href="blank.html">Новая регистрация</a>
+          </div>
+        </form>
+
         <p>
           <a href="blank.html">Пусто</a>
         </p>
+        <div>
+          <table>
+            <tr>
+              <td>
+                <button type="button" name="del-1"></button>
+              </td>
+              <td>
+                Пломбир с апельсиновым джемом
+              </td>
+              <td>
+                1,5 кг х <span>200 руб.</span>
+              </td>
+              <td>
+                300 руб.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" name="del-1"></button>
+              </td>
+              <td>
+                Клубничный пломбир с присыпкой из белого шоколада
+              </td>
+              <td>
+                1,5 кг х <span>300 руб.</span>
+              </td>
+              <td>
+                450 руб.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                Итого: 750 руб.
+              </td>
+            </tr>
+          </table>
+          <a href="blank.html">Оформить заказ</a>
+        </div>
+
       </nav>
     </header>
+<!--========================================================================-->
 
+
+<!--ОСНОВНОЙ РАЗДЕЛ=========================================================-->
     <main>
-      <h1>Глэйси - магазин мороженого</h1> <!-- Скрытый заголовок-->
+      <h1 class="visually-hidden">Глэйси - магазин мороженого</h1> <!-- Скрытый заголовок-->
 
       <!-- Здесь будет слайдер -->
       <section class="slide-1">
@@ -75,7 +151,7 @@
 
       <!-- Здесь будут акции -->
       <section>
-        <h2>Акции</h2> <!-- Скрытый заголовок -->
+        <h2 class="visually-hidden">Акции</h2> <!-- Скрытый заголовок -->
         <article class="promo-1">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -148,15 +224,15 @@
       <section>
         <h2>Новое в нашем блоге</h2>
         <article>
-          <a href="#">
+          <a href="blank.html">
             <h3>10 способов сервировки фруктовых щербетов к столу</h3>
           </a>
         </article>
       </section>
 
-      <form class="" action="index.html" method="post">
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <input type="email">
+        <input type="email" name="email" placeholder="Электронная почта" required>
         <button type="submit">Отправить</button>
       </form>
 
@@ -181,40 +257,44 @@
       </div>
 
     </main>
+<!--========================================================================-->
 
+
+
+<!--ПОДВАЛ==================================================================-->
     <footer>
       <section>
-        <h2>Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
+        <h2 class="visually-hidden">Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
-            <a href="#">Твиттер</a>
+            <a href="blank.html">Твиттер</a>
           </li>
           <li>
-            <a href="#">Инстаграм</a>
+            <a href="blank.html">Инстаграм</a>
           </li>
           <li>
-            <a href="#">Фейсбук</a>
+            <a href="blank.html">Фейсбук</a>
           </li>
           <li>
-            <a href="#">Вконтакте</a>
+            <a href="blank.html">Вконтакте</a>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>Ссылки</h2> <!-- Скрытый заголовок-->
+        <h2 class="visually-hidden">Ссылки</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
-            <a href="#">Для поставщиков</a>
+            <a href="blank.html">Для поставщиков</a>
           </li>
           <li>
-            <a href="#">Наши документы</a>
+            <a href="blank.html">Наши документы</a>
           </li>
           <li>
-            <a href="#">О производстве</a>
+            <a href="blank.html">О производстве</a>
           </li>
           <li>
-            <a href="#">Экологические стандарты</a>
+            <a href="blank.html">Экологические стандарты</a>
           </li>
         </ul>
       </section>
@@ -224,5 +304,21 @@
         <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
       </p>
     </footer>
+<!--========================================================================-->
+
+
+
+<!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
+    <div>
+      <p>Мы обязательно вам ответим!</p>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <input type="text" name="name" placeholder="Как вас зовут?" required><br>
+        <input type="email" name="email" placeholder="Ваша почта для ответа?" required><br>
+        <textarea name="comment" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </div>
+
   </body>
 </html>
