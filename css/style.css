@@ -1,0 +1,166 @@
+/* Variables */
+
+:root {
+  --basic-white: #ffffff;
+  --basic-extra-dark: #323232;
+  --basic-dark: #353535;
+  --basic-gray: #5A5A5A;
+  --basic-light-gray: #999999;
+}
+
+/* Global */
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1px; 
+	overflow: hidden;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-white);
+  background-color: #E84D37; /* Здесь нужен градиент*/
+}
+
+/* Main navigation */
+
+.site-navigation a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--basic-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-navigation a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--basic-white);
+}
+
+.phone {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.phone a {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+/* Banners */
+
+.advantages h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-extra-dark);
+}
+
+.advantages p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+}
+
+/* News & Subscribtion */
+
+.news h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--basic-extra-dark);
+}
+
+.post-heading {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-extra-dark);
+}
+
+.post-underline {
+  border-bottom: 2px solid var(--basic-dark);
+}
+
+.subscription p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-gray);
+}
+
+.subscription input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-light-gray);
+}
+
+/* Contacts */
+
+.contacts h2,
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+}
+
+.contacts b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-extra-dark);
+}
+
+/* Main footer */
+
+.links a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.links .highlight {
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.copyright a {
+  color: var(--basic-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
