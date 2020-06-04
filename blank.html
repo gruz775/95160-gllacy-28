@@ -3,107 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси|Заглушка </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body style="background-color: #9D8B84"> <!-- Временный фон для видимости белых изображений -->
+  <body>
 <!--ШАПКА===================================================================-->
     <header>
-      <nav>
-        <a href="index.html">
+      
+<!--  Главное меню------------------------------------------------------------>
+      <nav class="main-navigation">
+        <a href="/">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
         </a>
-        <ul>
-          <li>
-            <a href="catalog.html">Каталог</a>
-            <ul>
-              <li>
-                <a href="blank.html">Новинки</a></li>
-              <li>
-                <a href="blank.html">Сливочное</a>
-              </li>
-              <li>
-                <a href="blank.html">Щербеты</a>
-              </li>
-              <li>
-                <a href="blank.html">Фруктовый лед</a>
-              </li>
-              <li>
-                <a href="blank.html">Мелорин</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="blank.html">Доставка и оплата</a>
-          </li>
-          <li>
-            <a href="blank.html">О Компании</a>
-          </li>
-        </ul>
+        <div class="main-navigation-wrapper">
+          <ul class="site-navigation">
+            <li>
+              <a href="catalog.html">Каталог</a>
+              <ul class="visually-hidden">
+                <li>
+                  <a href="blank.html">Новинки</a></li>
+                <li>
+                  <a href="blank.html">Сливочное</a>
+                </li>
+                <li>
+                  <a href="blank.html">Щербеты</a>
+                </li>
+                <li>
+                  <a href="blank.html">Фруктовый лед</a>
+                </li>
+                <li>
+                  <a href="blank.html">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="blank.html">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="blank.html">О Компании</a>
+            </li>
+          </ul>
 
-        <p>
-          <a href="blank.html">Поиск</a>
-        </p>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <input type="search" name="search" placeholder="Что ищем?" required>
-        </form>
-
-        <p>
-          <a href="blank.html">Вход</a>
-        </p>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <input type="email" name="email" placeholder="Электронная почта" required>
-          <input type="password" name="password" placeholder="Пароль" required>
-          <div>
-            <button type="submit">Войти</button>
-          </div>
-          <div>
-            <a href="blank.html">Забыли пароль?</a>
-            <a href="blank.html">Новая регистрация</a>
-          </div>
-        </form>
-
-        <p>
-          <a href="blank.html">Пусто</a>
-        </p>
-        <div>
-          <table>
-            <tr>
-              <td>
-                <button type="button" name="del-1"></button>
-              </td>
-              <td>
-                Пломбир с апельсиновым джемом
-              </td>
-              <td>
-                1,5 кг х <span>200 руб.</span>
-              </td>
-              <td>
-                300 руб.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button type="button" name="del-1"></button>
-              </td>
-              <td>
-                Клубничный пломбир с присыпкой из белого шоколада
-              </td>
-              <td>
-                1,5 кг х <span>300 руб.</span>
-              </td>
-              <td>
-                450 руб.
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                Итого: 750 руб.
-              </td>
-            </tr>
-          </table>
-          <a href="blank.html">Оформить заказ</a>
+          <div class="user-navigation">
+            <p>
+              <a href="blank.html">Поиск</a>
+            </p>
+            <p>
+              <a href="blank.html">Вход</a>
+            </p>
+            <p>
+              <a href="blank.html">Пусто</a>
+            </p>
+          </div>      
         </div>
-
       </nav>
+      
+      <p class="phone">
+        с 10 до 20, ежедневно<br>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </p>
     </header>
 <!--========================================================================-->
 
@@ -122,7 +81,7 @@
 
 <!--ПОДВАЛ==================================================================-->
     <footer>
-      <section>
+      <section class="socials">
         <h2 class="visually-hidden">Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
@@ -140,11 +99,11 @@
         </ul>
       </section>
 
-      <section>
+      <section class="links">
         <h2 class="visually-hidden">Ссылки</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
-            <a href="blank.html">Для поставщиков</a>
+            <a  class="highlight" href="blank.html">Для поставщиков</a>
           </li>
           <li>
             <a href="blank.html">Наши документы</a>
@@ -158,7 +117,7 @@
         </ul>
       </section>
 
-      <p>
+      <p class="copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
         <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
       </p>
