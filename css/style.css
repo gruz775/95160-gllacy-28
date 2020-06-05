@@ -1,0 +1,340 @@
+/* Variables */
+
+:root {
+  --basic-white: #ffffff;
+
+  --basic-extra-light: rgba(255, 255, 255, 0.2);
+  --basic-dark: #323232;
+  --basic-underline: #353535;
+  --basic-gray: #5A5A5A;
+  --basic-light-gray: #999999;
+  --bg-color-3: #9D8B84;
+  --bg-color-2: #8996A6;
+  --bg-color-1: #849D8F;
+  --bg-advantages: #fae4b4;
+  --bg-news: #ffffff;
+  --bg-subscribe: #F8F7F4;
+  --button-main: #E84D37;
+  --button-main-hover: #F26843;
+  --link-hover-light: #FFBC9E;
+  --link-hover-dark: #E84D37;
+  --border-hover-light: rgba(255, 188, 158, 0.3);
+
+}
+
+/* Global */
+
+body {
+
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Tahoma, sans-serif;
+  background-color: var(--bg-color-1);
+}
+
+img {
+  max-width: 100%;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0;
+  border:0;
+  height: 1px; 
+  width: 1px; 
+  overflow: hidden;
+
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-white);
+  background-color: var(--button-main); /* Здесь нужен градиент*/
+}
+
+.button:hover {
+  background-color: var(--button-main-hover);
+  border-bottom: 1px solid var(--border-hover-light);
+}
+
+/* Catalog */
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: var(--basic-white);
+  border-bottom: 1px solid var(--basic-extra-light);
+}
+
+.breadcrumbs a:hover,
+.breadcrubms a:focus {
+  color: var(--link-hover-light);
+}
+
+.breadbrumbs-current {
+  color: var(--basic-white);
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item:hover {
+  background-color: var(--basic-extra-light);
+}
+
+.catalog-item h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--basic-white);
+  border-bottom: 1px solid var(--basic-extra-light);
+}
+
+.catalog-item h3:hover,
+.catalog-item h3:focus {
+  color: var(--link-hover-light);
+  border-bottom: 1px solid var(--border-hover-light);
+}
+
+.catalog-price b {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.catalog-price span {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  color: var(--basic-white);
+
+}
+
+/* Main navigation */
+
+
+.main navigation {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-white);
+  background-color: transparent;
+}
+
+.main-navigation-wrapper {
+  background-color: var(--bg-color-1);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+
+.site-navigation a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--basic-white);
+  border-bottom: 1px solid var(--basic-extra-light);
+
+}
+
+.user-navigation a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--basic-white);
+  background-color: var(--basic-extra-light)
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+
+}
+
+.phone {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.phone a {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+
+/* Advantages */
+
+.advantages {
+  background-color: var(--bg-advantages);
+  background-image: url("../img/pattern-wafer.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+
+.advantages h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-dark);
+}
+
+.advantages ul {
+  list-style: none;
+
+}
+
+.advantages p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-dark);
+
+}
+
+/* News & Subscribtion */
+
+
+.news {
+  background-color: var(--bg-news);
+  background-image: url("../img/bg-strawberry.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+
+.news h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--basic-dark);
+
+}
+
+.post-heading {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-dark);
+}
+
+.post-underline {
+  border-bottom: 2px solid var(--basic-underline);
+}
+
+
+.subscribe {
+  background-image: url("../img/bg-subscribe.png");
+}
+
+.subscribe form {
+  background-color: var(--bg-subscribe);
+  margin: 5px;
+}
+
+.subscribe p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-gray);
+}
+
+
+.subscribe input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-light-gray);
+}
+
+/* Contacts */
+
+.contacts h2,
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--basic-dark);
+}
+
+.contacts b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--basic-dark);
+}
+
+/* Main footer */
+
+.socials ul {
+  list-style: none;
+}
+
+.links ul {
+  list-style: none;
+}
+
+
+.links a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.links a:hover {
+  color: var(--link-hover-light);
+  border-bottom: 1px solid var(--border-hover-light);
+}
+
+.links .highlight {
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.copyright a {
+  color: var(--basic-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright a:hover {
+  color: var(--link-hover-light);
+  border-bottom: 1px solid var(--border-hover-light);
+
+}
