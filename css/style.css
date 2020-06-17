@@ -10,6 +10,8 @@
   --bg-color-3: #9D8B84;
   --bg-color-2: #8996A6;
   --bg-color-1: #849D8F;
+  --bg-banner-1: #62040f;
+  --bg-banner-2: #4c2211;
   --bg-advantages: #fae4b4;
   --bg-news: #ffffff;
   --bg-subscribe: #F8F7F4;
@@ -18,6 +20,7 @@
   --link-hover-light: #FFBC9E;
   --link-hover-dark: #E84D37;
   --border-hover-light: rgba(255, 188, 158, 0.3);
+  --link-underline-light: rgba(255, 255, 255, 0.3);
 }
 
 /* Global */
@@ -164,6 +167,8 @@ img {
 
 .user-navigation {
   padding-left: 50px;
+  outline: 5px solid rgba(255, 0, 255, 0.3);
+  outline-offset: -5px;
 }
 
 .user-navigation p {
@@ -229,8 +234,6 @@ img {
   justify-content: space-between;
   min-height: 229px;
   margin-bottom: 40px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
 }
 
 .banner {
@@ -241,11 +244,11 @@ img {
 }
 
 .banner-1 {
-  background-color: #62040f;
+  background-color: var(--bg-banner-1);
 }
 
 .banner-2 {
-  background-color: #4c2211;
+  background-color: var(--bg-banner-2);
 }
 
 /* Hits */
@@ -322,8 +325,6 @@ img {
   background-image: url("../img/bg-strawberry.jpg");
   background-position: left center;
   background-repeat: no-repeat;
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
 }
 
 
@@ -451,7 +452,7 @@ img {
   line-height: 18px;
   font-weight: 400;
   color: var(--basic-white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--link-underline-light);
 }
 
 .footter-links a:hover {
@@ -477,7 +478,7 @@ img {
 
 .footer-copyright a {
   color: var(--basic-white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--link-underline-light);
 }
 
 .footer-copyright a:hover {
