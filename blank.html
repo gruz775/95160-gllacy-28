@@ -7,64 +7,63 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+    <body class="page-body inner-page">
+    <div class="container">
 <!--ШАПКА===================================================================-->
-    <header>
-      
-<!--++Главное меню++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="main-navigation">
-        <a href="/">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
-        </a>
-        <div class="main-navigation-wrapper">
-          <ul class="site-navigation">
-            <li>
-              <a href="catalog.html">Каталог</a>
-              <ul class="visually-hidden">
-                <li>
-                  <a href="blank.html">Новинки</a></li>
-                <li>
-                  <a href="blank.html">Сливочное</a>
-                </li>
-                <li>
-                  <a href="blank.html">Щербеты</a>
-                </li>
-                <li>
-                  <a href="blank.html">Фруктовый лед</a>
-                </li>
-                <li>
-                  <a href="blank.html">Мелорин</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="blank.html">Доставка и оплата</a>
-            </li>
-            <li>
-              <a href="blank.html">О Компании</a>
-            </li>
-          </ul>
+      <header class="main-header">
+        <nav class="main-navigation">
+          <div class="main-navigation-wrapper">
+            <a class="main-header-logo" href="index.html">
+              <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
+            </a>
+            
+            <ul class="site-navigation">
+              <li class="site-navigation-current">
+                <a href="catalog.html">Каталог</a>
+                <ul class="visually-hidden">
+                  <li>
+                    <a href="blank.html">Новинки</a></li>
+                  <li>
+                    <a href="blank.html">Сливочное</a>
+                  </li>
+                  <li>
+                    <a href="blank.html">Щербеты</a>
+                  </li>
+                  <li>
+                    <a href="blank.html">Фруктовый лед</a>
+                  </li>
+                  <li>
+                    <a href="blank.html">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="blank.html">Доставка и оплата</a>
+              </li>
+              <li>
+                <a href="blank.html">О Компании</a>
+              </li>
+            </ul>
 
-          <div class="user-navigation">
-            <p>
-              <a href="blank.html">Поиск</a>
-            </p>
-            <p>
-              <a href="blank.html">Вход</a>
-            </p>
-            <p>
-              <a href="blank.html">Пусто</a>
-            </p>
-          </div>      
-        </div>
-      </nav>
-<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      
-      <p class="phone">
-        с 10 до 20, ежедневно<br>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
-      </p>
-    </header>
+            <div class="user-navigation">
+              <p>
+                <a href="blank.html">Поиск</a>
+              </p>
+              <p>
+                <a href="blank.html">Вход</a>
+              </p>
+              <p>
+                <a href="blank.html">Пусто</a>
+              </p>
+            </div>
+          </div>
+        </nav>
+       
+        <p class="phone">
+          <span>с 10 до 20, ежедневно</span>
+          <a href="tel:+78124502525">8 812 450-25-25</a>
+        </p>
+      </header>
 <!--========================================================================-->
 
 
@@ -73,7 +72,7 @@
   <main>
     <h1>Это временная заглушка для проверки работы ссылок</h1>
     <p>
-      <a href="index.html">&lt;Назад</a>
+      <a class="button" href="index.html">&lt;Назад</a>
     </p>
   </main>
 <!--========================================================================-->
@@ -81,8 +80,8 @@
 
 
 <!--ПОДВАЛ==================================================================-->
-    <footer>
-      <section class="socials">
+    <footer class="main-footer">
+      <section class="footer-social">
         <h2 class="visually-hidden">Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
@@ -100,7 +99,7 @@
         </ul>
       </section>
 
-      <section class="links">
+      <section class="footer-links">
         <h2 class="visually-hidden">Ссылки</h2> <!-- Скрытый заголовок-->
         <ul>
           <li>
@@ -118,17 +117,18 @@
         </ul>
       </section>
 
-      <p class="copyright">
+      <p class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
         <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
       </p>
+
     </footer>
 <!--========================================================================-->
-
+    </div>
 
 
 <!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
-    <div>
+    <div class="visually-hidden">
       <p>Мы обязательно вам ответим!</p>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
         <input type="text" name="name" placeholder="Как вас зовут?" required><br>
