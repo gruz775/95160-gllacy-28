@@ -26,16 +26,22 @@
 /* Global */
 
 body {
-  min-width: 1200px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Roboto, Tahoma, sans-serif;
+  
+}
+
+.site-wrapper {
   background-color: var(--bg-color-1);
 }
 
 .container {
   width: 1146px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 a {
@@ -62,12 +68,11 @@ img {
   line-height: 24px;
   font-weight: 700;
   color: var(--basic-white);
-  background-color: var(--button-main); /* Здесь нужен градиент*/
+  background-color: var(--button-main);
 }
 
 .button:hover {
   background-color: var(--button-main-hover);
-  border-bottom: 1px solid var(--border-hover-light);
 }
 
 /* Grid */
@@ -81,6 +86,7 @@ img {
   display: grid;
   grid-template: min-content 1fr min-content;
   align-content: flex-start;
+  background-color: var(--bg-color-1);
 }
 
 /* Grid for pages */
@@ -111,12 +117,6 @@ img {
 
 .main-navigation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--basic-white);
-  background-color: transparent;
 }
 
 .main-header-logo {
@@ -128,14 +128,9 @@ img {
   outline-offset: -5px;
 }
 
-.main-navigation-wrapper {
-  width: 100%;
-  background-color: var(--bg-color-1);
-}
-
 /* Container */
 
-.main-navigation-wrapper .container {
+.main-navigation-wrapper {
   display: flex;
 }
 
@@ -222,10 +217,27 @@ img {
 /* Slider */
 
 .slider {
-  min-height: 468px;
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+  color: var(--basic-white);
   margin-bottom: 35px;
   outline: 5px solid rgba(255, 0, 0, 0.3);
   outline-offset: -5px;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
 }
 
 /* Banners */
@@ -251,9 +263,9 @@ img {
   background-color: var(--bg-banner-2);
 }
 
-/* Hits */
+/* Catalog Hits */
 
-.hits {
+.catalog-hits {
   min-height: 324px;
   margin-bottom: 40px;
   outline: 5px solid rgba(0, 0, 255, 0.3);
@@ -411,15 +423,12 @@ img {
 /* Main footer */
 
 .main-footer {
+  display: flex;
+  justify-content: space-between;
   min-height: 103px;
   padding: 18px 0;
   outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;
-}
-
-.main-footer .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footer-social {

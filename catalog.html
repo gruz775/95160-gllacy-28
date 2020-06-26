@@ -8,17 +8,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body inner-page">
+    <div class="container">
 <!--ШАПКА===================================================================-->
-    <header class="main-header">
-      
-<!--++Главное меню++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="main-navigation">
-        
-        <div class="main-navigation-wrapper">
-          <div class="container">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <div class="main-navigation-wrapper">
             <a class="main-header-logo" href="index.html">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
             </a>
+            
             <ul class="site-navigation">
               <li class="site-navigation-current">
                 <a href="catalog.html">Каталог</a>
@@ -59,23 +57,19 @@
               </p>
             </div>
           </div>
-        </div>
-      </nav>
-<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        </nav>
        
-      <div class="container">
         <p class="phone">
           <span>с 10 до 20, ежедневно</span>
           <a href="tel:+78124502525">8 812 450-25-25</a>
         </p>
-      </div>
-    </header>
+      </header>
 <!--========================================================================-->
 
 
 
 <!--ОСНОВНОЙ РАЗДЕЛ=========================================================-->
-    <main class="page-catalog container">
+    <main class="page-catalog">
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">Главная</a>
@@ -91,8 +85,85 @@
       <h1 class="page-title">Сливочное мороженое</h1>
 
       <section class="filters">
-        <h2>Фильтр товаров</h2> <!-- Скрытый заголовок-->
-        <!-- Здесь будет форма фильтра -->
+        <h2>Фильтр товаров</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter-item">
+            <legend>Сортировка:</legend>
+            <select name="sorting">
+              <option value="popularity">по популярности</option>
+              <option value="price">по цене</option>
+            </select>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Цена:</legend>
+            <div class="range-filter">
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="100">
+                </label>
+                <span>₽ –</span>
+                <label class="max-price">
+                  <input type="number" name="max-price" value="500">
+                </label>
+                <span>₽</span>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Жирность:</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="fat" value="zero" id="filter-zero">
+                  <label for="filter-zero">0%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat" value="upto10" id="filter-upto10" checked>
+                  <label for="filter-upto10">до 10%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat" value="upto30" id="filter-upto30">
+                  <label for="filter-upto30">до 30%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat" value="over30" id="filter-over30">
+                  <label for="filter-over30">выше 30%</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Наполнители:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="chokolate" id="filter-chokolate" checked>
+                  <label for="filter-chokolate">шоколадные</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="sugar" id="filter-sugar" checked>
+                  <label for="filter-sugar">сахарные присыпки</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="fruit" id="filter-fruit">
+                  <label for="filter-fruit">фрукты</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="syrup" id="filter-syrup">
+                  <label for="filter-syrup">сиропы</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="jam" id="filter-jam">
+                  <label for="filter-jam">джемы</label>
+                </li>
+              </ul>
+          </fieldset>
+          <button type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog">
@@ -231,7 +302,16 @@
             </a>
           </li>
         </ul>
-        <!-- Здесь будут номера страниц -->
+        
+        <ul class="page-list">
+          <li class="page-item page-item-disabled"><a>Назад</a></li>
+          <li class="page-item page-item-current"><a href="#">1</a></li>
+          <li class="page-item"><a href="#">2</a></li>
+          <li class="page-item"><a href="#">3</a></li>
+          <li class="page-item"><a href="#">4</a></li>
+          <li class="page-item"><a href="#">5</a></li>
+          <li class="page-item"><a href="#">Вперёд</a></li>
+        </ul>   
       </section>
     </main>
 <!--========================================================================-->
@@ -240,51 +320,50 @@
 
 <!--ПОДВАЛ==================================================================-->
     <footer class="main-footer">
-      <div class="container">
-        <section class="footer-social">
-          <h2 class="visually-hidden">Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
-          <ul>
-            <li>
-              <a href="blank.html">Твиттер</a>
-            </li>
-            <li>
-              <a href="blank.html">Инстаграм</a>
-            </li>
-            <li>
-              <a href="blank.html">Фейсбук</a>
-            </li>
-            <li>
-              <a href="blank.html">Вконтакте</a>
-            </li>
-          </ul>
-        </section>
+      <section class="footer-social">
+        <h2 class="visually-hidden">Глэйси в социальных сетях</h2> <!-- Скрытый заголовок-->
+        <ul>
+          <li>
+            <a href="blank.html">Твиттер</a>
+          </li>
+          <li>
+            <a href="blank.html">Инстаграм</a>
+          </li>
+          <li>
+            <a href="blank.html">Фейсбук</a>
+          </li>
+          <li>
+            <a href="blank.html">Вконтакте</a>
+          </li>
+        </ul>
+      </section>
 
-        <section class="footer-links">
-          <h2 class="visually-hidden">Ссылки</h2> <!-- Скрытый заголовок-->
-          <ul>
-            <li>
-              <a  class="highlight" href="blank.html">Для поставщиков</a>
-            </li>
-            <li>
-              <a href="blank.html">Наши документы</a>
-            </li>
-            <li>
-              <a href="blank.html">О производстве</a>
-            </li>
-            <li>
-              <a href="blank.html">Экологические стандарты</a>
-            </li>
-          </ul>
-        </section>
+      <section class="footer-links">
+        <h2 class="visually-hidden">Ссылки</h2> <!-- Скрытый заголовок-->
+        <ul>
+          <li>
+            <a  class="highlight" href="blank.html">Для поставщиков</a>
+          </li>
+          <li>
+            <a href="blank.html">Наши документы</a>
+          </li>
+          <li>
+            <a href="blank.html">О производстве</a>
+          </li>
+          <li>
+            <a href="blank.html">Экологические стандарты</a>
+          </li>
+        </ul>
+      </section>
 
-        <p class="footer-copyright">
-          <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-          <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
-        </p>
-      </div>
+      <p class="footer-copyright">
+        <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
+        <span>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2017</span>
+      </p>
+
     </footer>
 <!--========================================================================-->
-
+    </div>
 
 
 <!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
