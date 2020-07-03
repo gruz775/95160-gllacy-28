@@ -86,7 +86,7 @@
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-sort">
                 <legend>Сортировка:</legend>
                 <select name="sorting">
                   <option value="popularity">по популярности</option>
@@ -95,16 +95,17 @@
                   <option value="fat-content">по жирности</option>
                 </select>
               </fieldset>
-              <fieldset class="filter-item">
-                <legend>Цена:</legend>
+              <fieldset class="filter-item filter-item-price">
+                <legend class="visually-hidden">Цена:</legend>
                 <div class="range-filter">
                   <div class="price-controls">
+                    <span>Цена:</span>
                     <label class="min-price">
-                      <input type="number" name="min-price" value="100">
+                      <input type="text" name="min-price" value="100">
                     </label>
                     <span>₽ –</span>
                     <label class="max-price">
-                      <input type="number" name="max-price" value="500">
+                      <input type="text" name="max-price" value="500">
                     </label>
                     <span>₽</span>
                   </div>
@@ -117,7 +118,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-fat">
                 <legend>Жирность:</legend>
                   <ul>
                     <li>
@@ -138,7 +139,7 @@
                     </li>
                   </ul>
               </fieldset>
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-filler">
                 <legend>Наполнители:</legend>
                   <ul>
                     <li>
