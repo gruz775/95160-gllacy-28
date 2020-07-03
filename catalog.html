@@ -16,6 +16,7 @@
             <a href="index.html" class="main-header-logo">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
             </a>
+            
             <ul class="site-navigation">
               <li class="site-dropdown site-link-current">
                 <a class="site-link" href="catalog.html"><span>Каталог</span></a>
@@ -99,7 +100,7 @@
             <li>
               <a href="catalog.html">Каталог</a>
             </li>
-            <li class="breadcrumbs-current">
+            <li class="breadbrumbs-current">
               Сливочное
             </li>
           </ul>
@@ -107,12 +108,91 @@
           <h1 class="page-title">Сливочное мороженое</h1>
 
           <section class="filters">
-            <h2>Фильтр товаров</h2> <!-- Скрытый заголовок-->
-            <!-- Здесь будет форма фильтра -->
+            <h2>Фильтр товаров</h2>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filter-item">
+                <legend>Сортировка:</legend>
+                <select name="sorting">
+                  <option value="popularity">по популярности</option>
+                  <option value="price-up">сначала недорогие</option>
+                  <option value="price-down">сначала дорогие</option>
+                  <option value="fat-content">по жирности</option>
+                </select>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Цена:</legend>
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input type="number" name="min-price" value="100">
+                    </label>
+                    <span>₽ –</span>
+                    <label class="max-price">
+                      <input type="number" name="max-price" value="500">
+                    </label>
+                    <span>₽</span>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Жирность:</legend>
+                  <ul>
+                    <li>
+                      <input type="radio" name="fat" value="zero" id="filter-zero">
+                      <label for="filter-zero">0%</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="fat" value="upto10" id="filter-upto10" checked>
+                      <label for="filter-upto10">до 10%</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="fat" value="upto30" id="filter-upto30">
+                      <label for="filter-upto30">до 30%</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="fat" value="over30" id="filter-over30">
+                      <label for="filter-over30">выше 30%</label>
+                    </li>
+                  </ul>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Наполнители:</legend>
+                  <ul>
+                    <li>
+                      <input type="checkbox" name="chokolate" id="filter-chokolate" checked>
+                      <label for="filter-chokolate">шоколадные</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="sugar" id="filter-sugar" checked>
+                      <label for="filter-sugar">сахарные присыпки</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="fruit" id="filter-fruit">
+                      <label for="filter-fruit">фрукты</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="syrup" id="filter-syrup">
+                      <label for="filter-syrup">сиропы</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="jam" id="filter-jam">
+                      <label for="filter-jam">джемы</label>
+                    </li>
+                  </ul>
+              </fieldset>
+              <button type="submit">Применить</button>
+            </form>
           </section>
 
           <section class="catalog">
-            <h2 class="visually-hidden">Список сортов мороженого</h2>
+            <h2 class="visually-hidden">Список сортов мороженого</h2> <!-- Скрытый заголовок-->
             <ul class="catalog-list">
               <li class="catalog-item">
                 <a href="">
@@ -283,7 +363,16 @@
                 </a>
               </li>
             </ul>
-            <!-- Здесь будут номера страниц -->
+
+            <ul class="page-list">
+              <li class="page-item page-item-disabled"><a>Назад</a></li>
+              <li class="page-item page-item-current"><a href="#">1</a></li>
+              <li class="page-item"><a href="#">2</a></li>
+              <li class="page-item"><a href="#">3</a></li>
+              <li class="page-item"><a href="#">4</a></li>
+              <li class="page-item"><a href="#">5</a></li>
+              <li class="page-item"><a href="#">Вперёд</a></li>
+            </ul>   
           </section>
         </main>
 <!--========================================================================-->

@@ -8,15 +8,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-    <div class="site-wrapper">
+    <div class="site-wrapper site-wrapper-1">
       <div class="container">
 <!--ШАПКА===================================================================-->
         <header class="main-header">
-          <nav class="main-navigation"> 
+          <nav class="main-navigation">
             <a class="main-header-logo">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси">
             </a>
-            
+              
             <ul class="site-navigation">
               <li class="site-dropdown">
                 <a class="site-link" href="catalog.html"><span>Каталог</span></a>
@@ -80,7 +80,7 @@
               </a>
             </div>
           </nav>
-          
+      
           <p class="phone">
             <span>с 10 до 20, ежедневно</span>
             <a href="tel:+78124502525">8 812 450-25-25</a>
@@ -93,9 +93,9 @@
         <main class="page-index">
           <h1 class="visually-hidden">Глэйси - магазин мороженого</h1>
 
-<!--++Здесь будет слайдер+++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--++++++Слайдер+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
           <section class="slider">
-            <h2>Слайдер</h2>
+            <h2 class="visually-hidden">Слайдер</h2>
             <ul class="slider-list">
               <li class="slider-item slide slide-current">
                 <h3 class="slide-title">
@@ -127,7 +127,7 @@
           </section>
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-<!--++++Здесь будут баннеры+++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--++++++Баннеры+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
           <section class="banners">
             <h2 class="visually-hidden">Акции</h2>
             <article class="banner banner-1">
@@ -144,40 +144,64 @@
           </section>
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       
-<!--++Здесь будут хитовые товары++++++++++++++++++++++++++++++++++++++++++++-->
-          <section class="hits">
-            <h2>Хиты продаж</h2>
-            <ul class="visually-hidden">
-              <li>
+<!--++++++Хитовые товары++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <section class="catalog catalog-hits">
+            <h2 class="visually-hidden">Хиты продаж</h2>
+            <ul class="catalog-list">
+              <li class="catalog-item">
                 <a href="">
-                  <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                  <p>
+                  <h3 class="catalog-item-heading">
+                    <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                  </h3>
+                  <div class="catalog-item-image">
                     <img src="img/product-01.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                      <p>310&#8381;<span>/кг</span></p>
+                    <p class="catalog-price">
+                      <b>310&#8381;</b>
+                      <span>/кг</span>
+                    </p>
+                  </div>
                 </a>
               </li>
-              <li>
+              <li class="catalog-item">
                 <a href="">
-                  <h3>Сливочно-кофейное с кусочками шоколада</h3>
-                  <p>
+                  <h3 class="catalog-item-heading">
+                    <span>Сливочно-кофейное с кусочками шоколада</span>
+                  </h3>
+                  <div class="catalog-item-image">
                     <img src="img/product-02.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                      <p>380&#8381;<span>/кг</span></p>
+                    <p class="catalog-price">
+                      <b>380&#8381;</b>
+                      <span>/кг</span>
+                    </p>
+                  </div>
                 </a>
               </li>
-              <li>
+              <li class="catalog-item">
                 <a href="">
-                  <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                  <p>
+                  <h3 class="catalog-item-heading">
+                    <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
+                  </h3>
+                  <div class="catalog-item-image">
                     <img src="img/product-03.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                      <p>355&#8381;<span>/кг</span></p>
+                    <p class="catalog-price">
+                      <b>355&#8381;</b>
+                      <span>/кг</span>
+                    </p>
+                  </div>
                 </a>
               </li>
-              <li>
+              <li class="catalog-item">
                 <a href="">
-                  <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-                  <p>
+                  <h3 class="catalog-item-heading">
+                    <span>Сливочное крем-брюле с карамельной подливкой</span>
+                  </h3>
+                  <div class="catalog-item-image">
                     <img src="img/product-04.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                      <p>415&#8381;<span>/кг</span></p>
+                    <p class="catalog-price">
+                      <b>415&#8381;</b>
+                      <span>/кг</span>
+                    </p>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -212,9 +236,9 @@
                 <a href="blank.html">
                   <h3 class="post-heading">
                     <span class="post-underline">
-                      10 способов сервировки<br>
+                      10 способов сервировки
                       фруктовых щербетов &nbsp;&nbsp;<br>
-                      к сто</span>лу
+                      к столу</span>
                   </h3>
                 </a>
               </article>
@@ -224,8 +248,8 @@
               <h2 class="visually-hidden">Подписка</h2>
               <div class="subscribe-container">
                 <form action="https://echo.htmlacademy.ru/courses" method="post">
-                  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                  <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
+                  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не 
+                  <input class="input-field" type="email" name="email" placeholder="Электронная почта" required>
                   <button class="button" type="submit">Отправить</button>
                 </form>
               </div>
@@ -256,7 +280,7 @@
             </div>
           </div>
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-  
+
         </main>
 <!--========================================================================-->
 
