@@ -75,10 +75,58 @@
                   </div>
                 </form>
               </div>
-              <a class="user-link" href="blank.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
-                <span>Пусто</span>
-              </a>
+              <div class="cart-wrapper">
+                <a class="user-link cart-filled" href="blank.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
+                  <span>2 товара</span>
+                </a>
+                <div class="cart-form">
+                  <table class="cart-table">
+                    <tr>
+                      <td class="delete">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="#2C2829"/>
+                        </svg>
+                      </td>
+                      <td class="icon">
+                        <img src="img/product-icon-13.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                      </td>
+                      <td class="name">
+                        Пломбир с апельсиновым джемом
+                      </td>
+                      <td class="quantity">
+                        1,5 кг x <i class="price">200 руб.</i>
+                      </td>
+                      <td class="sum">
+                        300 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="delete">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.712591L10.2874 0L5.5 4.78741L0.712591 0L0 0.712591L4.78741 5.5L0 10.2874L0.712591 11L5.5 6.21259L10.2874 11L11 10.2874L6.21259 5.5L11 0.712591Z" fill="#2C2829"/>
+                        </svg>
+                      </td>
+                      <td class="icon">
+                        <img src="img/product-icon-14.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                      </td>
+                      <td class="name">
+                        Клубничный пломбир с присыпкой из белого шоколада
+                      </td>
+                      <td class="quantity">
+                        1,5 кг x <i class="price">300 руб.</i>
+                      </td>
+                      <td class="sum">
+                        450 руб.
+                      </td>
+                    </tr>
+                  </table>
+                  <p class="cart-form-total">
+                    <b>Итого: 750 руб.</b>
+                  </p>
+                  <a class="button" href="blank.html">Оформить заказ</a>
+                </div>
+              </div>
             </div>
           </nav>
        
@@ -100,7 +148,7 @@
             <li>
               <a href="catalog.html">Каталог</a>
             </li>
-            <li class="breadbrumbs-current">
+            <li class="breadcrumbs-current">
               Сливочное
             </li>
           </ul>
@@ -110,7 +158,7 @@
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-sort">
                 <legend>Сортировка:</legend>
                 <select name="sorting">
                   <option value="popularity">по популярности</option>
@@ -119,16 +167,17 @@
                   <option value="fat-content">по жирности</option>
                 </select>
               </fieldset>
-              <fieldset class="filter-item">
-                <legend>Цена:</legend>
+              <fieldset class="filter-item filter-item-price">
+                <legend class="visually-hidden">Цена:</legend>
                 <div class="range-filter">
                   <div class="price-controls">
+                    <span>Цена:</span>
                     <label class="min-price">
-                      <input type="number" name="min-price" value="100">
+                      <input type="text" name="min-price" value="100">
                     </label>
                     <span>₽ –</span>
                     <label class="max-price">
-                      <input type="number" name="max-price" value="500">
+                      <input type="text" name="max-price" value="500">
                     </label>
                     <span>₽</span>
                   </div>
@@ -141,7 +190,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-fat">
                 <legend>Жирность:</legend>
                   <ul>
                     <li>
@@ -162,7 +211,7 @@
                     </li>
                   </ul>
               </fieldset>
-              <fieldset class="filter-item">
+              <fieldset class="filter-item filter-item-filler">
                 <legend>Наполнители:</legend>
                   <ul>
                     <li>
