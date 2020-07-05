@@ -1,7 +1,7 @@
 /* Variables */
 
 :root {
-  --basic-white: #ffffff;
+  --basic-white: #FFFFFF;
   --basic-extra-light: rgba(255, 255, 255, 0.2);
   --basic-dark: #323232;
   --basic-underline: #353535;
@@ -10,10 +10,9 @@
   --bg-color-3: #9D8B84;
   --bg-color-2: #8996A6;
   --bg-color-1: #849D8F;
-  --bg-banner-1: #62040f;
-  --bg-banner-2: #4c2211;
-  --bg-advantages: #fae4b4;
-  --bg-news: #ffffff;
+  --bg-banner-1: #62040F;
+  --bg-banner-2: #4C2211;
+  --bg-advantages: #FAE4B4;
   --bg-subscribe: #F8F7F4;
   --button-main: #E84D37;
   --button-main-hover: #F26843;
@@ -141,6 +140,11 @@ input[type="radio"].visually-hidden {
   grid-template: min-content 1fr min-content;
   align-content: flex-start;
   background-color: var(--bg-color-1);
+}
+
+.inner-page .site-wrapper {
+  background-image: linear-gradient(var(--basic-extra-light), transparent);
+  background-size: auto 656px;
 }
 
 /* Main header */
@@ -690,7 +694,7 @@ input[type="radio"].visually-hidden {
   padding: 20px;
   padding-top: 18px;
   border-radius: 16px;
-  background-color: var(--bg-news);
+  background-color: var(--bg-white);
   background-image: url("../img/bg-strawberry.jpg");
   background-position: left center;
   background-repeat: no-repeat;
@@ -1087,14 +1091,6 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-.catalog-item:hover {
-  background-color: var(--basic-extra-light);
-}
-
-.catalog-item:hover .catalog-item-image::before {
-  background-image: url("../img/product-mask-hover.png");
-}
-
 .catalog-item-heading {
   display: inline;
   margin: 0 5px;
@@ -1127,6 +1123,18 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/product-mask.png");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.catalog-item:nth-of-type(-n+4) .catalog-item-image::before {
+  background-image: url("../img/product-mask-gradient.png");
+}
+
+.catalog-item:hover {
+  background-color: var(--basic-extra-light);
+}
+
+.catalog-item:hover .catalog-item-image::before {
+  background-image: url("../img/product-mask-hover.png");
 }
 
 .catalog-price {
