@@ -582,6 +582,7 @@ img {
 /* Catalog */
 
 .page-title {
+  margin-bottom: 29px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -604,10 +605,6 @@ img {
 
 .breadbrumbs-current {
   color: var(--basic-white);
-}
-
-page-catalog .page-title {
-  margin-bottom: 29px;
 }
 
 .catalog-list {
