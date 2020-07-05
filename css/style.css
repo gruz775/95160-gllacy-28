@@ -357,7 +357,7 @@ img {
   margin: 0;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--basic-dark);
   border-bottom: 2px solid var(--basic-underline);
 }
@@ -449,11 +449,16 @@ img {
   color: var(--basic-dark);
 }
 
+.contacts h2 {
+  width: 155px;
+}
+
 .contacts p {
   margin-bottom: 40px;
 }
 
 .contacts b {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -517,7 +522,7 @@ img {
   font-weight: 700;
 }
 
-.footer-link span {
+.footer-link a {
   color: var(--basic-white);
   border-bottom: 1px solid var(--link-underline-light);
 }
@@ -531,7 +536,7 @@ img {
   fill: var(--link-hover-light);
 }
 
-.footer-link:hover span {
+.footer-link:hover a {
   color: var(--link-hover-light);
   border-bottom: 1px solid var(--border-hover-light);
 }
