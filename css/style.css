@@ -348,16 +348,17 @@ img {
   color: var(--basic-dark);
 }
 
-.post-heading {
+.news-post {
   width: 287px;
+}
+
+.news-post-heading {
+  display: inline;
   margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: var(--basic-dark);
-}
-
-.post-underline {
   border-bottom: 2px solid var(--basic-underline);
 }
 
