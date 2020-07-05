@@ -706,17 +706,18 @@ input[type="radio"].visually-hidden {
   color: var(--basic-dark);
 }
 
-.post-heading {
+.news-post {
   width: 287px;
+}
+
+.news-post-heading {
+  display: inline;
   margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-dark);
-}
-
-.post-underline {
-  text-decoration: underline;
+  border-bottom: 2px solid var(--basic-underline);
 }
 
 /* Subscribe */
@@ -810,11 +811,16 @@ input[type="radio"].visually-hidden {
   color: var(--basic-dark);
 }
 
+.contacts h2 {
+  width: 155px;
+}
+
 .contacts p {
   margin-bottom: 40px;
 }
 
 .contacts b {
+  display: block;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -905,13 +911,16 @@ input[type="radio"].visually-hidden {
 
 .footer-link {
   position: relative;
+  padding-top: 4px;
+  padding-bottom: 0;
   font-size: 13px;
   line-height: 18px;
   margin-left: -2px;
 }
 
 .footer-link:nth-child(2n+1) {
-  padding: 0 18px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .footer-link.highlight {
@@ -925,13 +934,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-link a {
-  display: block;
-  padding: 0;
-  padding-top: 4px;
   line-height: 18px;
-}
-
-.footer-link span {
   color: var(--basic-white);
   border-bottom: 1px solid var(--link-underline-light);
 }
@@ -940,7 +943,7 @@ input[type="radio"].visually-hidden {
   fill: var(--link-hover-light);
 }
 
-.footer-link:hover span {
+.footer-link:hover a {
   color: var(--link-hover-light);
   border-bottom: 1px solid var(--border-hover-light);
 }
@@ -1010,6 +1013,7 @@ input[type="radio"].visually-hidden {
 /* Catalog */
 
 .page-title {
+  margin-bottom: 29px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -1063,7 +1067,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-catalog .page-title {
-  margin-bottom: 29px;
+  
 }
 
 .catalog-list {
@@ -1080,11 +1084,7 @@ input[type="radio"].visually-hidden {
   min-height: 360px;
   margin-right: 26px;
   margin-bottom: 40px;
-}
-
-.catalog-item a {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
 
 .catalog-item:nth-child(4n) {
@@ -1100,6 +1100,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-heading {
+  display: inline;
   order: 1;
   margin: 5px;
   font-size: 16px;
@@ -1107,9 +1108,6 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   text-align: center;
   color: var(--basic-white);
-}
-
-.catalog-item-heading span {
   border-bottom: 1px solid var(--basic-extra-light);
 }
 
