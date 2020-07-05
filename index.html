@@ -18,43 +18,66 @@
             </a>
               
             <ul class="site-navigation">
-              <li>
-                <a href="catalog.html">Каталог</a>
-                <ul class="visually-hidden">
+              <li class="site-dropdown">
+                <a class="site-link" href="catalog.html"><span>Каталог</span></a>
+                <ul class="dropdown-list">
                   <li>
-                    <a href="blank.html">Новинки</a></li>
+                    <a class="dropdown-link dropdown-new" href="blank.html">Новинки</a></li>
                   <li>
-                    <a href="blank.html">Сливочное</a>
+                    <a class="dropdown-link" href="blank.html">Сливочное</a>
                   </li>
                   <li>
-                    <a href="blank.html">Щербеты</a>
+                    <a class="dropdown-link" href="blank.html">Щербеты</a>
                   </li>
                   <li>
-                    <a href="blank.html">Фруктовый лед</a>
+                    <a class="dropdown-link" href="blank.html">Фруктовый лед</a>
                   </li>
                   <li>
-                    <a href="blank.html">Мелорин</a>
+                    <a class="dropdown-link" href="blank.html">Мелорин</a>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="blank.html">Доставка и оплата</a>
+              <li class="site-dropdown">
+                <a class="site-link" href="blank.html"><span>Доставка и оплата</span></a>
               </li>
-              <li>
-                <a href="blank.html">О Компании</a>
+              <li class="site-dropdown">
+                <a class="site-link" href="blank.html"><span>О компании</span></a>
               </li>
             </ul>
 
             <div class="user-navigation">
-              <p>
-                <a href="blank.html">Поиск</a>
-              </p>
-              <p>
-                <a href="blank.html">Вход</a>
-              </p>
-              <p>
-                <a href="blank.html">Пусто</a>
-              </p>
+              <div class="search-wrapper">
+                <a class="user-link search-link" href="blank.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <input class="input-field" type="text" name="search" placeholder="Крем-брюле">
+                </form>
+              </div>
+              <div class="entrance-wrapper">
+                <a class="user-link" href="blank.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+                  <span>Вход</span>
+                </a>
+                <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
+                  <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
+                  <input class="input-field" type="password" name="password" placeholder="......">
+                  <button class="button" type="submit">Войти</button>
+                  <div class="login-help">
+                    <a class="restore" href="blank.html">
+                      <span>Забыли пароль?</span>
+                    </a>
+                    <a class="sign-up" href="blank.html">
+                      <span>Новая регистрация</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <a class="user-link" href="blank.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
+                <span>Пусто</span>
+              </a>
             </div>
           </nav>
       
@@ -127,9 +150,6 @@
             <ul class="catalog-list">
               <li class="catalog-item">
                 <a href="">
-                  <h3 class="catalog-item-heading">
-                    <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-                  </h3>
                   <div class="catalog-item-image">
                     <img src="img/product-01.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <p class="catalog-price">
@@ -137,13 +157,13 @@
                       <span>/кг</span>
                     </p>
                   </div>
+                  <h3 class="catalog-item-heading">
+                    Сливочное с апельсиновым джемом и цитрусовой стружкой
+                  </h3>
                 </a>
               </li>
               <li class="catalog-item">
                 <a href="">
-                  <h3 class="catalog-item-heading">
-                    <span>Сливочно-кофейное с кусочками шоколада</span>
-                  </h3>
                   <div class="catalog-item-image">
                     <img src="img/product-02.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <p class="catalog-price">
@@ -151,13 +171,13 @@
                       <span>/кг</span>
                     </p>
                   </div>
+                  <h3 class="catalog-item-heading">
+                    Сливочно-кофейное с кусочками шоколада
+                  </h3>
                 </a>
               </li>
               <li class="catalog-item">
                 <a href="">
-                  <h3 class="catalog-item-heading">
-                    <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
-                  </h3>
                   <div class="catalog-item-image">
                     <img src="img/product-03.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <p class="catalog-price">
@@ -165,13 +185,13 @@
                       <span>/кг</span>
                     </p>
                   </div>
+                  <h3 class="catalog-item-heading">
+                    Сливочно-клубничное с присыпкой из белого шоколада
+                  </h3>
                 </a>
               </li>
               <li class="catalog-item">
                 <a href="">
-                  <h3 class="catalog-item-heading">
-                    <span>Сливочное крем-брюле с карамельной подливкой</span>
-                  </h3>
                   <div class="catalog-item-image">
                     <img src="img/product-04.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <p class="catalog-price">
@@ -179,6 +199,9 @@
                       <span>/кг</span>
                     </p>
                   </div>
+                  <h3 class="catalog-item-heading">
+                    Сливочное крем-брюле с карамельной подливкой
+                  </h3>
                 </a>
               </li>
             </ul>
@@ -209,13 +232,12 @@
           <div class="index-columns">
             <section class="news">
               <h2>Новое в нашем блоге</h2>
-              <article class="post">
+              <article class="news-post">
                 <a href="blank.html">
-                  <h3 class="post-heading">
-                    <span class="post-underline">
+                  <h3 class="news-post-heading">
                       10 способов сервировки
-                      фруктовых щербетов &nbsp;&nbsp;<br>
-                      к столу</span>
+                      фруктовых щербетов &nbsp;&nbsp;&nbsp;
+                      к столу
                   </h3>
                 </a>
               </article>
@@ -239,16 +261,16 @@
             <img src="img/map-with-pin.png" width="1200" height="430" alt="Карта местонахождения ул. Большая Конюшенная, 19/8, Санкт-Петербург">
             <article class="contacts">
               <h2>
-                Адрес главного офиса<br>
+                Адрес главного офиса
                 и офлайн-магазина:
               </h2>
               <p>
-                <b>ул. Большая Конюшенная,<br>
+                <b>ул. Большая Конюшенная,
                    19/8, Санкт-Петербург</b>
               </p>
               <p>
-                Для заказов по телефону:<br>
-                <a href="tel:+78124502525"><b>8 812 450-25-25</b></a><br>
+                Для заказов по телефону:
+                <a href="tel:+78124502525"><b>8 812 450-25-25</b></a>
                 (с 10 до 20 ежедневно)
               </p>
               <a class="button" href="blank.html">Форма обратной связи</a>
@@ -299,22 +321,22 @@
               <li class="footer-link highlight">
                 <a href="blank.html">
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>
-                  <span>Для поставщиков</span>
+                  Для поставщиков
                 </a>
               </li>
               <li class="footer-link">
                 <a href="blank.html">
-                  <span>Наши документы</span>
+                  Наши документы
                 </a>
               </li>
               <li class="footer-link">
                 <a href="blank.html">
-                  <span>О производстве</span>
+                  О производстве
                 </a>
               </li>
               <li class="footer-link">
                 <a href="blank.html">
-                  <span>Экологические стандарты</span>
+                  Экологические стандарты
                 </a>
               </li>
             </ul>
@@ -333,15 +355,18 @@
 
 
 <!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
-    <div class="visually-hidden">
-      <p>Мы обязательно вам ответим!</p>
-      <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <input type="text" name="name" placeholder="Как вас зовут?" required><br>
-        <input type="email" name="email" placeholder="Ваша почта для ответа?" required><br>
-        <textarea name="comment" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea><br>
-        <button type="submit">Отправить</button>
+    <div class="feedback">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <p>Мы обязательно вам ответим!</p>
+        <input class="input-field" type="text" name="name" placeholder="Имя Фамилия" required>
+        <input class="input-field" type="email" name="email" placeholder="email@example.com" required>
+        <textarea class="input-field comment-field" name="comment" rows="8" cols="80" placeholder="В свободной форме" required></textarea>
+        <button class="button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="button-close" type="button">
+        Закрыть
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
+      </button>
     </div>
 
   </body>
