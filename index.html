@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ca137b26-f21c-481a-9130-f1edc54e86a3&lang=ru_RU" type="text/javascript">
+    </script>
   </head>
   <body class="page-body">
     <div class="site-wrapper site-wrapper-1">
@@ -262,7 +264,7 @@
         
 <!--++Интерактивная карта и контакты++++++++++++++++++++++++++++++++++++++++-->
           <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/-/CCQlI4WQtD" width="100%" height="430" frameborder="1" allowfullscreen="true"></iframe>
+            <div class="map-canvas" id="map"></div>
             <div class="map-wrapper">
               <img src="img/map-with-pin.png" width="1200" height="430" alt="Карта местонахождения ул. Большая Конюшенная, 19/8, Санкт-Петербург">
               <article class="contacts">
@@ -377,5 +379,41 @@
     </div>
     
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+      ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [59.939330, 30.329490],
+              zoom: 16
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Собственный значок метки',
+              balloonContent: 'Это красивая метка'
+          }, {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/pin.svg',
+              iconImageSize: [80, 140],
+              iconImageOffset: [-333, -80]
+          });
+
+        myMap.controls.remove('geolocationControl');
+        myMap.controls.remove('searchControl');
+        myMap.controls.remove('routeButtonControl');
+        myMap.controls.remove('trafficControl');
+        myMap.controls.remove('typeSelector');
+        myMap.controls.remove('fullscreenControl');
+        myMap.controls.remove('zoomControl');
+        myMap.controls.remove('rulerControl');
+        
+      myMap.geoObjects
+          .add(myPlacemark)
+      });
+    </script>
   </body>
 </html>
