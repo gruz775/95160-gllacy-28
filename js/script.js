@@ -1,30 +1,74 @@
 // Форма обратной связи
 
-let link = document.querySelector('.feedback-button');
-let popup = document.querySelector('.feedback');
-let close = popup.querySelector(".button-close");
+var feedbackLink = document.querySelector('.feedback-button');
+var feedbackPopup = document.querySelector('.feedback');
+var feedbackClose = feedbackPopup.querySelector(".button-close");
+var feedbackForm = feedbackPopup.querySelector(".feedback-form");
+var feedbackLogin = feedbackPopup.querySelector(".feedback-login");
+var feedbackEmail = feedbackPopup.querySelector(".feedback-email");
 
-link.addEventListener('click', function (event) {
-  event.preventDefault();
-  popup.classList.add('feedback-show');
-});
+var isStorageSupport = true;
+var storage = "";
 
-close.addEventListener("click", function (event) {
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+feedbackLink.addEventListener('click', function (event) {
   event.preventDefault();
-  if (popup.classList.contains("feedback-show")) {
-    popup.classList.remove("feedback-show");
+  if (!feedbackPopup.classList.contains("feedback-show")) {
+    feedbackPopup.classList.add('feedback-show');
+  }
+    if(storage) {
+      feedbackLogin.value = storage;
+      feedbackEmail.focus();
+    } else {
+    feedbackLogin.focus();
   }
 });
 
+feedbackClose.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (feedbackPopup.classList.contains("feedback-show")) {
+    feedbackPopup.classList.remove("feedback-show");
+    feedbackPopup.classList.remove("feedback-error");
+  }
+});
+
+feedbackForm.addEventListener("submit", function(event) {
+  if(!feedbackLogin.value || !feedbackEmail.value) {
+    event.preventDefault();
+    feedbackPopup.classList.remove("feedback-error");
+    feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+    feedbackPopup.classList.add("feedback-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", feedbackLogin.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    if (feedbackPopup.classList.contains("feedback-show")) {
+      event.preventDefault()
+      feedbackPopup.classList.remove("feedback-show");
+      feedbackPopup.classList.remove("feedback-error");
+    }
+  }
+})
+
 // Слайдер
 
-let sbtn1 = document.querySelector('.slider-button-1');
-let sbtn2 = document.querySelector('.slider-button-2');
-let sbtn3 = document.querySelector('.slider-button-3');
-let wrapper = document.querySelector('.site-wrapper');
-let slide1 = document.querySelector('.slide-1');
-let slide2 = document.querySelector('.slide-2');
-let slide3 = document.querySelector('.slide-3');
+var sbtn1 = document.querySelector('.slider-button-1');
+var sbtn2 = document.querySelector('.slider-button-2');
+var sbtn3 = document.querySelector('.slider-button-3');
+var wrapper = document.querySelector('.site-wrapper');
+var slide1 = document.querySelector('.slide-1');
+var slide2 = document.querySelector('.slide-2');
+var slide3 = document.querySelector('.slide-3');
 
 sbtn1.addEventListener('click', function(event) {
   event.preventDefault();
