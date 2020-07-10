@@ -126,3 +126,41 @@ sbtn3.addEventListener('click', function(event) {
     slide3.classList.add("slide-current");
   }
 });
+
+// Интерактивная карта
+
+ymaps.ready(function () {
+var myMap = new ymaps.Map('map', {
+        center: [59.939330, 30.329490],
+        zoom: 16
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/pin.svg',
+        iconImageSize: [80, 140],
+        iconImageOffset: [-333, -80]
+    });
+
+  myMap.controls.remove('geolocationControl');
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('routeButtonControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('typeSelector');
+  myMap.controls.remove('fullscreenControl');
+  myMap.controls.remove('zoomControl');
+  myMap.controls.remove('rulerControl');
+  myMap.behaviors.disable('scrollZoom');
+
+myMap.geoObjects
+    .add(myPlacemark)
+});
