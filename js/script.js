@@ -2,23 +2,23 @@
 
 var feedbackLink = document.querySelector('.feedback-button');
 var feedbackPopup = document.querySelector('.feedback');
-var feedbackClose = feedbackPopup.querySelector(".button-close");
-var feedbackForm = feedbackPopup.querySelector(".feedback-form");
-var feedbackLogin = feedbackPopup.querySelector(".feedback-login");
-var feedbackEmail = feedbackPopup.querySelector(".feedback-email");
+var feedbackClose = feedbackPopup.querySelector('.button-close');
+var feedbackForm = feedbackPopup.querySelector('.feedback-form');
+var feedbackLogin = feedbackPopup.querySelector('.feedback-login');
+var feedbackEmail = feedbackPopup.querySelector('.feedback-email');
 
 var isStorageSupport = true;
-var storage = "";
+var storage = '';
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem('login');
 } catch (err) {
   isStorageSupport = false;
 }
 
 feedbackLink.addEventListener('click', function (event) {
   event.preventDefault();
-  if (!feedbackPopup.classList.contains("feedback-show")) {
+  if (!feedbackPopup.classList.contains('feedback-show')) {
     feedbackPopup.classList.add('feedback-show');
   }
     if(storage) {
@@ -29,36 +29,45 @@ feedbackLink.addEventListener('click', function (event) {
   }
 });
 
-feedbackClose.addEventListener("click", function (event) {
+feedbackClose.addEventListener('click', function (event) {
   event.preventDefault();
-  if (feedbackPopup.classList.contains("feedback-show")) {
-    feedbackPopup.classList.remove("feedback-show");
-    feedbackPopup.classList.remove("feedback-error");
-  }
+  feedbackPopup.classList.add('feedback-close');
+  setTimeout(function() {
+    if (feedbackPopup.classList.contains('feedback-show')) {
+      feedbackPopup.classList.remove('feedback-show');
+    }
+    if (feedbackPopup.classList.contains('feedback-close')) {
+      feedbackPopup.classList.remove('feedback-close');
+    }
+  }, 600);
 });
 
-feedbackForm.addEventListener("submit", function(event) {
+feedbackForm.addEventListener('submit', function(event) {
   if(!feedbackLogin.value || !feedbackEmail.value) {
     event.preventDefault();
-    feedbackPopup.classList.remove("feedback-error");
+    feedbackPopup.classList.remove('feedback-error');
     feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
-    feedbackPopup.classList.add("feedback-error");
+    feedbackPopup.classList.add('feedback-error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("login", feedbackLogin.value);
+      localStorage.setItem('login', feedbackLogin.value);
     }
   }
 });
 
-window.addEventListener("keydown", function(event) {
+window.addEventListener('keydown', function(event) {
   if (event.keyCode === 27) {
-    if (feedbackPopup.classList.contains("feedback-show")) {
-      event.preventDefault()
-      feedbackPopup.classList.remove("feedback-show");
-      feedbackPopup.classList.remove("feedback-error");
-    }
+    feedbackPopup.classList.add('feedback-close');
+    setTimeout(function() {
+      if (feedbackPopup.classList.contains('feedback-show')) {
+        feedbackPopup.classList.remove('feedback-show');
+      }
+      if (feedbackPopup.classList.contains('feedback-close')) {
+        feedbackPopup.classList.remove('feedback-close');
+      }
+    }, 600);
   }
-})
+});
 
 // Слайдер
 
@@ -72,58 +81,58 @@ var slide3 = document.querySelector('.slide-3');
 
 sbtn1.addEventListener('click', function(event) {
   event.preventDefault();
-  if (wrapper.classList.contains("site-wrapper-2")) {
-    wrapper.classList.remove("site-wrapper-2");
-    wrapper.classList.add("site-wrapper-1");
-    sbtn2.classList.remove("current");
-    sbtn1.classList.add("current");
-    slide2.classList.remove("slide-current");
-    slide1.classList.add("slide-current");
-  } else if (wrapper.classList.contains("site-wrapper-3")) {
-    wrapper.classList.remove("site-wrapper-3");
-    wrapper.classList.add("site-wrapper-1");
-    sbtn3.classList.remove("current");
-    sbtn1.classList.add("current");
-    slide3.classList.remove("slide-current");
-    slide1.classList.add("slide-current");
+  if (wrapper.classList.contains('site-wrapper-2')) {
+    wrapper.classList.remove('site-wrapper-2');
+    wrapper.classList.add('site-wrapper-1');
+    sbtn2.classList.remove('button-current');
+    sbtn1.classList.add('button-current');
+    slide2.classList.remove('slide-current');
+    slide1.classList.add('slide-current');
+  } else if (wrapper.classList.contains('site-wrapper-3')) {
+    wrapper.classList.remove('site-wrapper-3');
+    wrapper.classList.add('site-wrapper-1');
+    sbtn3.classList.remove('button-current');
+    sbtn1.classList.add('button-current');
+    slide3.classList.remove('slide-current');
+    slide1.classList.add('slide-current');
   }
 });
 
 sbtn2.addEventListener('click', function(event) {
   event.preventDefault();
-  if (wrapper.classList.contains("site-wrapper-1")) {
-    wrapper.classList.remove("site-wrapper-1");
-    wrapper.classList.add("site-wrapper-2");
-    sbtn1.classList.remove("current");
-    sbtn2.classList.add("current");
-    slide1.classList.remove("slide-current");
-    slide2.classList.add("slide-current");
-  } else if (wrapper.classList.contains("site-wrapper-3")) {
-    wrapper.classList.remove("site-wrapper-3");
-    wrapper.classList.add("site-wrapper-2");
-    sbtn3.classList.remove("current");
-    sbtn2.classList.add("current");
-    slide3.classList.remove("slide-current");
-    slide2.classList.add("slide-current");
+  if (wrapper.classList.contains('site-wrapper-1')) {
+    wrapper.classList.remove('site-wrapper-1');
+    wrapper.classList.add('site-wrapper-2');
+    sbtn1.classList.remove('button-current');
+    sbtn2.classList.add('button-current');
+    slide1.classList.remove('slide-current');
+    slide2.classList.add('slide-current');
+  } else if (wrapper.classList.contains('site-wrapper-3')) {
+    wrapper.classList.remove('site-wrapper-3');
+    wrapper.classList.add('site-wrapper-2');
+    sbtn3.classList.remove('button-current');
+    sbtn2.classList.add('button-current');
+    slide3.classList.remove('slide-current');
+    slide2.classList.add('slide-current');
   }
 });
 
 sbtn3.addEventListener('click', function(event) {
   event.preventDefault();
-  if (wrapper.classList.contains("site-wrapper-2")) {
-    wrapper.classList.remove("site-wrapper-2");
-    wrapper.classList.add("site-wrapper-3");
-    sbtn2.classList.remove("current");
-    sbtn3.classList.add("current");
-    slide2.classList.remove("slide-current");
-    slide3.classList.add("slide-current");
-  } else if (wrapper.classList.contains("site-wrapper-1")) {
-    wrapper.classList.remove("site-wrapper-1");
-    wrapper.classList.add("site-wrapper-3");
-    sbtn1.classList.remove("current");
-    sbtn3.classList.add("current");
-    slide1.classList.remove("slide-current");
-    slide3.classList.add("slide-current");
+  if (wrapper.classList.contains('site-wrapper-2')) {
+    wrapper.classList.remove('site-wrapper-2');
+    wrapper.classList.add('site-wrapper-3');
+    sbtn2.classList.remove('button-current');
+    sbtn3.classList.add('button-current');
+    slide2.classList.remove('slide-current');
+    slide3.classList.add('slide-current');
+  } else if (wrapper.classList.contains('site-wrapper-1')) {
+    wrapper.classList.remove('site-wrapper-1');
+    wrapper.classList.add('site-wrapper-3');
+    sbtn1.classList.remove('button-current');
+    sbtn3.classList.add('button-current');
+    slide1.classList.remove('slide-current');
+    slide3.classList.add('slide-current');
   }
 });
 
