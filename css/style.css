@@ -1671,8 +1671,9 @@ input[type="radio"].visually-hidden {
 .page-item-disabled a:hover,
 .page-item-disabled a:focus,
 .page-item-disabled a:active {
-  opacity: 0.2;
+  background-color: transparent;
   cursor: default;
+  opacity: 0.2;
 }
 
 .page-item-disabled a path {
