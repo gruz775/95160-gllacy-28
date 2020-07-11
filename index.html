@@ -55,6 +55,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
               </a>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                <label for="search-field" class="visually-hidden">Поиск</label>
                 <input class="input-field" type="text" name="search" id="search-field" placeholder="Поиск по сайту" required>
               </form>
             </div>
@@ -64,7 +65,9 @@
                 Вход
               </a>
               <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
+                <label for="login-email-field" class="visually-hidden">Электронная почта</label>
                 <input class="input-field" type="text" name="email" id="login-email-field" placeholder="email@example.com" required>
+                <label for="password-field" class="visually-hidden">Пароль</label>
                 <input class="input-field" type="password" name="password" id="password-field" placeholder="......" required>
                 <button class="button" type="submit">Войти</button>
                 <div class="login-help">
@@ -124,9 +127,9 @@
             </li>
           </ul>
           <div class="slider-controls">
-            <label for="slide-switch-1" class="slider-button slider-button-1 button-current" type="button" aria-label="Первый слайд"></label>
-            <label for="slide-switch-2" class="slider-button slider-button-2" type="button" aria-label="Второй слайд"></label>
-            <label for="slide-switch-3" class="slider-button slider-button-3" type="button" aria-label="Третий слайд"></label>
+            <label for="slide-switch-1" class="slider-button slider-button-1 button-current" aria-label="Первый слайд"></label>
+            <label for="slide-switch-2" class="slider-button slider-button-2" aria-label="Второй слайд"></label>
+            <label for="slide-switch-3" class="slider-button slider-button-3" aria-label="Третий слайд"></label>
           </div>
         </section>
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -244,6 +247,7 @@
             <div class="subscribe-container">
               <form class="subscribe-form" action="https://echo.htmlacademy.ru/courses" method="post">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                <label for="subscribe-email-field" class="visually-hidden">Электронная почта</label>
                 <input class="input-field" type="email" name="email" id="subscribe-email-field" placeholder="email@example.com" required>
                 <button class="button" type="submit">Отправить</button>
               </form>
@@ -254,7 +258,9 @@
       </main>
 <!--++Интерактивная карта и контакты++++++++++++++++++++++++++++++++++++++++-->
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003351!2d30.320858716487933!3d59.93871916905377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1594479809034!5m2!1sru!2sru" width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003351!2d30.320858716487933!3d59.93871916905377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1594479809034!5m2!1sru!2sru" width="3840" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
         <article class="contacts">
           <h2>
             Адрес главного офиса
@@ -357,9 +363,12 @@
     <div class="feedback" id="feedback-popup">
       <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="post">
         <p>Мы обязательно вам ответим!</p>
+        <label for="feedback-name-field" class="visually-hidden">Имя Фамилия</label>
         <input class="input-field feedback-login" type="text" name="name" id="feedback-name-field" placeholder="Имя Фамилия">
+        <label for="feedback-email-field" class="visually-hidden">Электронная почта</label>
         <input class="input-field feedback-email" type="text" name="email" id="feedback-email-field" placeholder="email@example.com">
-        <textarea class="input-field comment-field" name="comment" rows="8" cols="80" placeholder="В свободной форме"></textarea>
+        <label for="feedback-comment-field" class="visually-hidden">Сообщение</label>
+        <textarea class="input-field comment-field" name="comment" id="feedback-comment-field" rows="8" cols="80" placeholder="В свободной форме"></textarea>
         <button class="button" type="submit">Отправить</button>
       </form>
       <button class="button-close">

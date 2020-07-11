@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Глейси|Заглушка </title>
+    <title>Глейси|Пустая страница </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
               
             <ul class="site-navigation">
               <li class="site-dropdown site-link-current">
-                <a class="site-link" href="catalog.html">Каталог</a>
+                <a class="site-link" href="#">Каталог</a>
                 <ul class="dropdown-list">
                   <li>
                     <a class="dropdown-link dropdown-new" href="blank.html">Новинки</a></li>
@@ -51,10 +51,8 @@
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
                 </a>
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <div class="input-field-wrapper">
-                    <input class="input-field" type="text" name="search" id="search-field" required>
-                    <label for="search-field">Поиск по сайту</label>
-                  </div>
+                  <label for="search-field" class="visually-hidden">Поиск</label>
+                  <input class="input-field" type="text" name="search" id="search-field" placeholder="Крем-брюле" required>
                   <button class="visually-hidden">Найти</button>
                 </form>
               </div>
@@ -64,14 +62,10 @@
                   Вход
                 </a>
                 <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
-                  <div class="input-field-wrapper">
-                    <input class="input-field" type="text" name="email" id="login-email-field" required>
-                    <label for="login-email-field">email@example.com</label>
-                  </div>
-                  <div class="input-field-wrapper">
-                    <input class="input-field" type="password" name="password" id="password-field" required>
-                    <label for="password-field">......</label>
-                  </div>
+                  <label for="login-email-field" class="visually-hidden">Электронная почта</label>
+                  <input class="input-field" type="text" name="email" id="login-email-field" placeholder="email@example.com" required>
+                  <label for="password-field" class="visually-hidden">Пароль</label>
+                  <input class="input-field" type="password" name="password" id="password-field" placeholder="......" required>
                   <button class="button" type="submit">Войти</button>
                   <div class="login-help">
                     <a class="restore" href="blank.html">
@@ -137,19 +131,31 @@
               </div>
             </div>
           </nav>
-      
-          <p class="phone">
-            <span>с 10 до 20, ежедневно</span>
-            <a href="tel:+78124502525">8 812 450-25-25</a>
-          </p>
+          
+          <div class="sub-navigation">
+            <ul class="breadcrumbs">
+              <li>
+                <a href="index.html">Главная</a>
+              </li>
+              <li>
+                <a href="catalog.html">Каталог</a>
+              </li>
+              <li class="breadcrumbs-current">
+                Сливочное
+              </li>
+            </ul>
+            <div class="phone">
+              <p>с 10 до 20, ежедневно</p>
+              <a href="tel:+78124502525">8 812 450-25-25</a>
+            </div>
+          </div>
         </header>
 <!--========================================================================-->
 
 
-
 <!--ОСНОВНОЙ РАЗДЕЛ=========================================================-->
   <main>
-    <h1>Это временная заглушка для проверки работы ссылок</h1>
+    <h1>Пустая страница</h1>
     <p>
       <a class="button" href="index.html">&lt;Назад</a>
     </p>
@@ -218,11 +224,13 @@
           </section>
 
           <div class="footer-copyright">
-            <div class="footer-copyright-wrapper">
+          <div class="footer-copyright-wrapper">
+            <a href="https://htmlacademy.ru" target="_blank">
               <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-              <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2019</span>
-            </div>
+            </a>
+            <span>Сделано в <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2019</span>
           </div>
+        </div>
         </footer>
 <!--========================================================================-->
       </div>
