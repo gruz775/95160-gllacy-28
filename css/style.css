@@ -1294,26 +1294,6 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
 }
 
-.filter-item-select:hover,
-.filteer-item-select:focus {
-  color: var(--basic-dark)
-}
-
-.filter-item-arrow {
-  position: absolute;
-  right: 14px;
-  bottom: 13px;
-  width: 11px;
-  height: 10px;
-  background-image: url("../img/icon-down-dir.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.filter-item-select:hover + .filter-item-arrow {
-  background-image: url("../img/icon-down-dir-hover.svg");
-}
-
 .filter-item-select {
   box-sizing: border-box;
   padding: 7px 9px 11px 16px;
@@ -1323,10 +1303,22 @@ input[type="radio"].visually-hidden {
   border: none;
   border-radius: 20px;
   background-color: var(--basic-extra-light);
+  cursor: pointer;
 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 171px 13px;
+}
+
+.filter-item-select:hover,
+.filter-item-select:focus {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+  background-image: url("../img/icon-down-dir-hover.svg");
 }
 
 .filter-item-select option {
