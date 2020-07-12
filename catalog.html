@@ -165,12 +165,13 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="filter-item filter-item-sort">
                 <legend>Сортировка:</legend>
-                  <select class="filter-item-select" name="sorting">
+                <select class="filter-item-select" name="sorting" id="filter-sorting">
                   <option value="popularity">по популярности</option>
                   <option value="price-up">сначала недорогие</option>
                   <option value="price-down">сначала дорогие</option>
                   <option value="fat-content">по жирности</option>
-                  </select>
+                </select>
+                <label for="filter-sorting" class="visually-hidden">Переключатель режима сортировки</label>
               </fieldset>
               <fieldset class="filter-item filter-item-price">
                 <legend class="visually-hidden">Цена:</legend>
