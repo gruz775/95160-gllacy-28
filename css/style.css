@@ -921,7 +921,7 @@ input[type="radio"].visually-hidden {
 .news-post-link:hover h3,
 .news-post-link:focus h3 {
   color: var(--link-hover-dark);
-  background-image: linear-gradient(var(--link-underline-hover),  var(--link-underline-hover));
+  background-image: linear-gradient(var(--link-underline-hover), var(--link-underline-hover));
 }
 
 /* Subscribe */
@@ -1117,7 +1117,7 @@ input[type="radio"].visually-hidden {
 
 .footer-link {
   position: relative;
-/*  margin-left: 0px;*/
+  /*  margin-left: 0px;*/
   padding-top: 4px;
   font-size: 13px;
   line-height: 18px;
@@ -1402,7 +1402,8 @@ input[type="radio"].visually-hidden {
 .filter-item ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 19px 0 16px;;
+  padding: 0 19px 0 16px;
+  ;
   min-height: 36px;
   border-radius: 20px;
   background-color: var(--basic-extra-light);
