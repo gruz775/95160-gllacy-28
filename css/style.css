@@ -264,8 +264,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   z-index: 10;
   display: none;
-  top: 51px;
-  margin-left: -7px;
+  top: 37px;
+  margin-left: -6px;
   padding: 0 0 5px 0;
   min-width: 143px;
   border-radius: 4px;
@@ -746,7 +746,7 @@ input[type="radio"].visually-hidden {
 }
 
 .banner {
-  padding: 16px 22px 16px 16px;
+  padding: 16px 22px 20px 16px;
   width: 522px;
   border-radius: 16px;
   color: var(--basic-white);
@@ -773,7 +773,7 @@ input[type="radio"].visually-hidden {
 }
 
 .banner p {
-  margin: 0 0 54px 0;
+  margin: 0 0 42px 0;
   text-align: left;
   font-weight: 700;
   font-size: 18px;
@@ -781,7 +781,9 @@ input[type="radio"].visually-hidden {
 }
 
 .banner .button {
-  padding: 13px 22px 13px 22px;
+  padding: 12px 22px 12px 22px;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 /* Catalog Hits */
