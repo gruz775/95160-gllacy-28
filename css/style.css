@@ -1053,7 +1053,7 @@ input[type="radio"].visually-hidden {
 
 .footer-social {
   display: flex;
-  max-width: 350px;
+  width: 350px;
 
   align-items: center;
 }
@@ -1105,7 +1105,7 @@ input[type="radio"].visually-hidden {
 
 .footer-links ul {
   display: grid;
-  margin: 0;
+  margin: 4px 17px 0 0;
   padding: 0 0 5px 0;
   max-width: 400px;
   list-style: none;
@@ -1115,14 +1115,14 @@ input[type="radio"].visually-hidden {
 
 .footer-link {
   position: relative;
-  margin-left: -2px;
-  padding-top: 5px;
+/*  margin-left: 0px;*/
+  padding-top: 4px;
   font-size: 13px;
   line-height: 18px;
 }
 
 .footer-link:nth-child(2n+1) {
-  padding: 5px 18px 0 18px;
+  padding: 4px 18px 0 18px;
 }
 
 .footer-link.highlight {
@@ -1155,8 +1155,7 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright {
   display: flex;
-  margin: 0;
-  max-width: 350px;
+  width: 350px;
   color: var(--basic-white);
   font-weight: 400;
   font-size: 12px;
@@ -1178,7 +1177,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-copyright span {
-  margin: 5px 0 7px 0;
+  margin: 0px 0 7px 0;
 }
 
 .footer-copyright-link {
