@@ -1261,15 +1261,12 @@ input[type="radio"].visually-hidden {
 
 .filters form {
   display: flex;
-  width: 869px;
-
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .filter-item {
-  margin: 0 0 15px 0;
+  margin: 0 15px 0 0;
   padding: 0;
   border: none;
 }
@@ -1293,19 +1290,10 @@ input[type="radio"].visually-hidden {
   width: 218px;
 }
 
-.filter-item-fat {
-  width: 425px;
-}
-
-.filter-item-filler {
-  margin: 0;
-  width: 711px;
-}
-
 .filter-item legend,
 .filter-item span {
   display: inline-block;
-  margin: 0 0 7px 16px;
+  margin: 0 0 0 16px;
   color: var(--basic-white);
   vertical-align: top;
   font-weight: 500;
@@ -1393,6 +1381,11 @@ input[type="radio"].visually-hidden {
   margin-left: 0;
 }
 
+.price-controls {
+  line-height: 12px;
+  font-size: 12px;
+}
+
 .price-controls input {
   margin: 0;
   padding: 0;
@@ -1407,8 +1400,8 @@ input[type="radio"].visually-hidden {
 
 .filter-item ul {
   display: flex;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  padding: 0 19px 0 16px;;
   min-height: 36px;
   border-radius: 20px;
   background-color: var(--basic-extra-light);
@@ -1418,23 +1411,44 @@ input[type="radio"].visually-hidden {
   align-items: flex-start;
 }
 
+.filter-item ul,
+.filter-item select {
+  margin: 7px 0 12px 0;
+}
+
+.filter-item .range-controls {
+  margin: 5px 0 12px 0;
+}
+
+.filter-item-filler ul {
+  margin-top: 10px;
+}
+
 .filter-option {
-  padding: 8px 0 0 46px;
+  padding: 8px 0 8px 32px;
 }
 
 .filter-radio {
-  margin-right: 6px;
+  margin-right: 19px;
+  margin-top: 2px;
+}
+
+.filter-radio:last-child {
+  margin-right: 0;
 }
 
 .filter-checkbox {
-  margin-right: 10px;
+  margin-right: 23px;
+}
+
+.filter-checkbox:last-child {
+  margin-right: 0;
 }
 
 .filter-option label {
   position: relative;
   display: block;
   cursor: pointer;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -1462,7 +1476,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-radio + label::before {
-  top: -1px;
+  top: -3px;
   left: -32px;
   width: 15px;
   height: 15px;
@@ -1471,7 +1485,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-radio:checked + label::after {
-  top: 6px;
+  top: 4px;
   left: -25px;
   width: 8px;
   height: 8px;
@@ -1496,7 +1510,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-btn {
-  margin-left: 14px;
+  align-self: flex-end;
+  margin-bottom: 13px;
   padding: 9px 9px 9px 9px;
   width: 144px;
   outline: none;
@@ -1524,7 +1539,7 @@ input[type="radio"].visually-hidden {
 /* Catalog */
 
 .catalog {
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .catalog-list {
